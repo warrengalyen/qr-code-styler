@@ -83,14 +83,14 @@ imageSize         |number |`0.4`        |Coefficient of the image size. Not reco
 
 Property|Type                                |Default Value|Description
 --------|------------------------------------|-------------|-----------------
-colour  |string                              |`'#000'`     |Colour of QR dots
+color  |string                              |`'#000'`     |Color of QR dots
 type    |string (`'rounded' 'dots' 'square'`)|`'default'`  |Style of QR dots
 
 `options.backgroundOptions` structure
 
 Property|Type  |Default Value
 --------|------|-------------
-colour  |string|`'#fff'`
+color  |string|`'#fff'`
 
 #### QrCodeStyler methods
 `QrCodeStyler.append(container) => void`

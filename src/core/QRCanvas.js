@@ -74,7 +74,7 @@ export default class QRCanvas {
                 }
 
                 if (this.qr.isDark(i, j)) {
-                    canvasContext.fillStyle = options.dotsOptions.colour;
+                    canvasContext.fillStyle = options.dotsOptions.color;
                     dot.draw(xBeginning + i * dotSize, yBeginning + j * dotSize, dotSize, (xOffset, yOffset) => {
                         if (i + xOffset >= 0 && j + yOffset >= 0 && i + xOffset < count && j + yOffset < count) {
                             if (filter && !filter(i + xOffset, j + yOffset)) return false;
