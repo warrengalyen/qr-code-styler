@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Add styling and image to your QR code",
   "dependencies": {
-    "qrcode": "^1.4.4",
     "qrcode-generator": "^1.4.4"
   },
   "devDependencies": {
