@@ -1,31 +1,31 @@
 import qrcode from 'qrcode-generator';
 
 function guessImageSizeForSide({ imageWidth, imageHeight, maxPixelsHide, pixelSize, side }) {
-    let hiddenPixelsWidth, hiddenPixelsHeight, imageResizedWidth, imageResizedHeight;
+    let m, n, w, h;
+    const k = imageHeight / imageWidth;
+    const S = maxPixelsHide;
+    const l = pixelSize;
 
     if (side == "x") {
-        hiddenPixelsWidth = Math.floor(Math.sqrt((maxPixelsHide * imageWidth / imageHeight)));
+       m = Math.floor(Math.sqrt(S / k));
+       if (m % 2 === 0) {
+           m--;
+       }
 
-        if (hiddenPixelsWidth % 2 === 0) {
-            hiddenPixelsWidth--;
-        }
-
-        imageResizedWidth = hiddenPixelsWidth * pixelSize;
-        imageResizedHeight = imageResizedWidth * imageHeight / imageWidth;
-        hiddenPixelsHeight = Math.cel(imageResizedHeight / pixelSize);
+       w = m * l;
+       n = 1 + 2 * Math.ceil((m * k * l - l) / (2 * l));
+       h = Math.ceil(y * k);
     } else {
-        hiddenPixelsHeight = Math.floor(Math.sqrt((maxPixelsHide * imageHeight / imageWidth)));
-
-        if (hiddenPixelsHeight % 2 === 0) {
-            hiddenPixelsHeight--;
+        n = Math.floor(Math.sqrt(S * k));
+        if (n % 2 === 0) {
+            n--;
         }
-
-        imageResizedHeight = hiddenPixelsHeight * pixelSize;
-        imageResizedWidth = imageHeight * imageWidth / imageHeight;
-        hiddenPixelsWidth = Math.cel(imageResizedWidth / pixelSize);
+        h = n * l;
+        m = 1 + 2 * Math.ceil((n * l / k - 1) / (2 * l));
+        w = Math.ceil(h / k);
     }
 
-    return { hiddenPixelsWidth, hiddenPixelsHeight, imageResizedWidth, imageResizedHeight };
+    return { hiddenPixelsWidth: m, hiddenPixelsHeight: n, imageResizedWidth: w, imageResizedHeight: h };
 }
 
 function calculateImageSize(props) {
@@ -86,18 +86,18 @@ export default class QrCodeStyler {
 
             generatedCanvas.drawImage(
                 baseImage,
-                xBeginning + (count - result.hiddenPixelsWidth) / 2 * pixelSize,
-                yBeginning + (count - result.hiddenPixelsHeight) / 2 * pixelSize,
+                xBeginning + (count * pixelSize - result.imageResizedWidth) / 2,
+                yBeginning + (count * pixelSize - result.imageResizedHeight) / 2,
                 result.imageResizedWidth,
                 result.imageResizedHeight);
 
             for (let i = 0; i < count; i++) {
                 for (let j = 0; j < count; j++) {
                     if (
-                        i >= (count - result.hiddenPixelsHeight) / 2
-                        && i < (count + result.hiddenPixelsHeight) / 2
-                        && j >= (count - result.hiddenPixelsWidth) / 2
-                        && j < (count + result.hiddenPixelsWidth) / 2
+                        i >= (count - result.hiddenPixelsWidth) / 2
+                        && i < (count + result.hiddenPixelsWidth) / 2
+                        && j >= (count - result.hiddenPixelsHeight) / 2
+                        && j < (count + result.hiddenPixelsHeight) / 2
                     ) {
                         continue;
                     }
