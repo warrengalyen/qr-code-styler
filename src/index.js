@@ -15,10 +15,10 @@ const defaultProps = {
         errorCorrectionLevel: errorCorrectLevels.L,
     },
     dotsOptions: {
-        colour: "#000",
+        color: "#000",
     },
     backgroundOptions: {
-        colour: "#fff",
+        color: "#fff",
     }
 };
 

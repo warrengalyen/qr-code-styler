@@ -15,6 +15,11 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
+  "scripts": {
+    "build:lib": "webpack --mode=production --config configs/webpack.config.lib.js",
+    "build:app": "webpack --mode=production --config configs/webpack.config.app.js",
+    "start": "webpack-dev-server --mode=development --open --config configs/webpack.config.app.js"
+  },
   "author": "Warren Galyen <wgalyen@bellhelmets.com>",
   "license": "GPL"
 }
