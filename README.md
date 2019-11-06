@@ -5,9 +5,9 @@ JavaScript library for generating QR codes with a logo and styling.
 ### Examples
 
 <p float="left">
-<img style="display:inline-block" src="./app/assets/facebook_example.png" width="270" />
-<img style="display:inline-block" src="app/assets/instagram_example.png" width="270" />
-<img style="display:inline-block" src="app/assets/telegram_example.png" width="270" />
+<img style="display:inline-block" src="./app/assets/facebook_example.png" width="240" />
+<img style="display:inline-block" src="app/assets/instagram_example.png" width="240" />
+<img style="display:inline-block" src="app/assets/telegram_example.png" width="240" />
 </p>
 
 ### Usage

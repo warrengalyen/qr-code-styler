@@ -11,8 +11,8 @@ const config = {
     output: {
         path: libPath,
         filename: "bell-qr-code-styler.js",
-        libary: "BellQrCodeStyler",
-        libaryTarget: "umd",
+        library: "BellQrCodeStyler",
+        libraryTarget: "umd",
         libraryExport: "default"
     },
     module: {

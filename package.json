@@ -2,6 +2,11 @@
   "name": "bell-qr-code-styler",
   "version": "0.1.1",
   "description": "Add styling and image to your QR code",
+  "main": "lib/bell-qr-code-styling.js",
+  "module": "src/core/index.js",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "qrcode-generator": "^1.4.4"
   },
@@ -21,5 +26,5 @@
     "start": "webpack-dev-server --mode=development --open --config configs/webpack.config.app.js"
   },
   "author": "Warren Galyen <wgalyen@bellhelmets.com>",
-  "license": "GPL"
+  "license": "GPLv3"
 }
