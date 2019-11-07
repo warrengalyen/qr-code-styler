@@ -29,7 +29,8 @@
   },
   "scripts": {
     "build": "webpack --mode=production --fix",
-    "build:dev": "webpack --mode=development"
+    "build:dev": "webpack --mode=development",
+    "test": "jest"
   },
   "author": "Warren Galyen <wgalyen@bellhelmets.com>",
   "license": "GPLv3"
