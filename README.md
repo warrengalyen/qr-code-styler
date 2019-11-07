@@ -104,3 +104,9 @@ container|DOM element|This container will be used for appending of the QR code
 Param  |Type  |Description
 -------|------|--------------------------------------
 options|object|The same options as for initialization
+
+`QRCodeStyler.download(extension) => void`
+
+Param    |Type                          |Default Value
+---------|------------------------------|-------------
+extension|string (`'png' 'jpeg' 'webp'`)|`'png'`
