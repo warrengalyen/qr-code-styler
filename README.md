@@ -23,7 +23,7 @@ JavaScript library for generating QR codes with a logo and styling.
 <body>
     <div id="canvas"></div>
     <script type="text/javascript">
-        const qrCode = new QrCodeStyler({
+        const qrCode = new QRCodeStyler({
             width: 300,
             height: 300,
             data: "https://www.facebook.com/",
@@ -44,8 +44,8 @@ JavaScript library for generating QR codes with a logo and styling.
 
 ### API Documentation
 
-#### QrCodeStyler instance
-`new QrCodeStyler(options) => QrCodeStyler`
+#### QRCodeStyler instance
+`new QRCodeStyler(options) => QRCodeStyler`
 
 Param  |Type  |Description
 -------|------|------------
@@ -93,13 +93,13 @@ Property|Type  |Default Value
 color  |string|`'#fff'`
 
 #### QrCodeStyler methods
-`QrCodeStyler.append(container) => void`
+`QRCodeStyler.append(container) => void`
 
 Param    |Type       |Description
 ---------|-----------|-----------
 container|DOM element|This container will be used for appending of the QR code
 
-`QrCodeStyler.update(options) => void`
+`QRCodeStyler.update(options) => void`
 
 Param  |Type  |Description
 -------|------|--------------------------------------
