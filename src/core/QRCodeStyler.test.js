@@ -31,6 +31,7 @@ describe("Test QRCodeStyler class", () => {
     const container = global.document.getElementById("container");
 
     qrCode.append(container);
+    // TODO: remove setTimeout
     setTimeout(() => {
       expect(qrCode._canvas.getCanvas().toDataURL()).toEqual(expect.stringContaining(expectedQRCodeFile));
       done();
