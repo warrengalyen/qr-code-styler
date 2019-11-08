@@ -117,6 +117,9 @@
                             <option value="jpeg">JPEG</option>
                         </select>
                     </div>
+                    <div class="qr-download-group">
+                        <button id="qr-test" onclick="getGeneratedQRCodeImage()">Test QR Code</button>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -132,5 +135,25 @@
         </div>
     </footer>
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="jsQR.js"></script>
+    <script>
+
+        function getGeneratedQRCodeImage() {
+            var cv = document.getElementsByTagName('canvas')[0];
+            var ctx = cv.getContext('2d');
+            var imageData = ctx.getImageData(0, 0, cv.height, cv.width);
+
+            const code = jsQR(imageData.data,  cv.height, cv.width)
+
+            if (code) {
+                alert("Valid QR code found: \n" + code.data);
+                var win = window.open(code.data, '_blank');
+                win.focus();
+            } else {
+                alert("QR Code is not valid!");
+            }
+        }
+
+    </script>
 </body>
 </html>
