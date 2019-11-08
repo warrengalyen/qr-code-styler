@@ -1,5 +1,6 @@
 export default {
   dots: "dots",
   rounded: "rounded",
-  square: "square"
+  square: "square",
+  checkered: "checkered"
 } as DotTypes;

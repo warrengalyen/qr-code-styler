@@ -28,6 +28,9 @@ export default class QRDot {
       case "rounded":
         drawFunction = this._drawRounded;
         break;
+      case "checkered":
+        drawFunction = this._drawCheckered;
+        break;
       case "square":
       default:
         drawFunction = this._drawSquare;
@@ -44,6 +47,10 @@ export default class QRDot {
 
   _drawSquare({ x, y, size, context }: DrawFunctionArgs): void {
     context.fillRect(x, y, size, size);
+  }
+
+  _drawCheckered({ x, y, size, context }: DrawFunctionArgs): void {
+    context.fillRect(x, y, size - 1, size - 1);
   }
 
   _drawRounded({ x, y, size, context, getNeighbor }: DrawFunctionArgs): void {

@@ -1,4 +1,4 @@
-import QRCodeStyler from './core/QRCodeStyler';
+import QRCodeStyler from "./core/QRCodeStyler";
 import dotTypes from "./constants/dotTypes";
 import errorCorrectionLevels from "./constants/errorCorrectionLevels";
 import errorCorrectionPercents from "./constants/errorCorrectionPercents";

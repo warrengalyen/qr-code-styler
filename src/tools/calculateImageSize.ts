@@ -14,12 +14,12 @@ interface ImageSizeResult {
 }
 
 export default function calculateImageSize({
-                                             originalHeight,
-                                             originalWidth,
-                                             maxHiddenDots,
-                                             maxHiddenAxisDots,
-                                             dotSize
-                                           }: ImageSizeOptions): ImageSizeResult {
+  originalHeight,
+  originalWidth,
+  maxHiddenDots,
+  maxHiddenAxisDots,
+  dotSize
+}: ImageSizeOptions): ImageSizeResult {
   const hideDots = { x: 0, y: 0 };
   const imageSize = { x: 0, y: 0 };
 
