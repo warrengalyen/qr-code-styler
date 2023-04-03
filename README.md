@@ -17,7 +17,7 @@ JavaScript library for generating QR codes with a logo and styling.
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bell QR Code Styler</title>
+    <title>QR Code Styler</title>
     <script type="text/javascript" src="../lib/bell-qr-code-styler.js"></script>
 </head>
 <body>
