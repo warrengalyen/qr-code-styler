@@ -1,4 +1,4 @@
-# Bell QR Code Styler
+# QR Code Styler
 
 JavaScript library for generating QR codes with a logo and styling.
 
